@@ -1,0 +1,152 @@
+1.what is differnce between em and rem in css?
+em:it is realtive to the font size of the elements parent.
+1 em=16px.
+rem:rem stands for root em.and is realtive to the root elements font size,typically font size of the document.
+if 1rem=16px,then it is anywhere in the document.
+
+2.explain the concept of closure in javascript with code.
+In JavaScript, a closure is a feature that allows a function to "remember" the environment in which it was created, even after that environment has finished executing. In other words, a closure gives you access to the outer function’s scope from an inner function, even after the outer function has completed execution.
+Example: Creating a Counter
+
+function Counter() {
+    let count = 0; 
+    return {
+        increment: function() {
+            count++;
+            console.log('Count:', count);
+        },
+        decrement: function() {
+            count--;
+            console.log('Count:', count);
+        },
+    };
+}
+const myCounter = Counter();
+myCounter.increment(); 
+myCounter.increment(); 
+myCounter.decrement(); 
+
+
+3.what are semantic html TimeRanges.
+
+Semantic HTML tags are elements in HTML that convey the meaning of the content they enclose,. These tags describe the structure and role of the content on a web page. Unlike generic tags such as <div> and <span>, which do not provide information about their contents, semantic tags give meaning to the content, making it easier to understand and manage.
+    <header>: Represents the introductory content or navigational links of a page or section. It typically includes elements like headings, logos, or navigation menus.
+
+    <nav>: Defines a section of navigation links. It is used to group together links to other pages or sections within the site.
+        
+    <main>: Encloses the main content of the page, excluding headers, footers, and sidebars. It represents the dominant content of the <body>.
+        
+    <section>: Represents a thematic grouping of content, typically with a heading. It is used to divide the content into meaningful sections.   
+
+
+        4.How would you create a responsive design without using a CSS framework like Bootstrap?(WRITE THE CODE)
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="style.css">
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                .container {
+                    text-align: center;
+                    padding: 20px;
+                }
+                .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navbar Styles */
+        .navbar {
+            background-color: rgba(235, 230, 230, 0.907);
+            padding: 20px 0;
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar .logo {
+            font-size: 24px;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin-right: 20px;
+        }
+        
+        .nav-links li a {
+            color: #151186fc;
+            text-decoration: none;
+        }
+                
+                .hero-content h1 {
+                    margin: 0;
+                    font-size: 2.5em;
+                }
+        
+                .hero-content p {
+                    font-size: 1.2em;
+                }
+        
+                .section {
+                    margin-bottom: 40px;
+                }
+                @media (max-width: 480px) {
+               .navbar .logo {
+               font-size: 20px;
+             }
+
+            .nav-links li a {
+             font-size: 14px;
+           }
+}
+        
+        
+                @media (max-width: 480px) {
+        
+                    .hero-content h1 {
+                        font-size: 2em;
+                    }
+        
+                    .hero-content p {
+                        font-size: 1em;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+                <nav class="navbar">
+                    <div class="container">
+                        <h1 class="logo"><h1>My City:</h1></h1>
+                        <ul class="nav-links">
+                            <li><a href="about.html"><h3>Places</h3></a></li>
+                            <li><a href="food.html"><h3>Food</h3></a></li>
+                            <li><a href="contact.html"><h3>Contact</h3></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+                <div class="hero-content">
+                    <h1>Welcome to Silk City Berhampur</h1>
+                    <p>Get in touch with us for any inquiries or support</p>
+                </div>
+            </body>
+            </html>
+
+           5. What is the purpose of the srcset attribute in the <img> tag?
+           The srcset attribute in the <img> tag is used to provide multiple image sources for different display resolutions and screen sizes. This attribute allows the browser to select the most appropriate image to display based on the device’s screen resolution and size, optimizing image loading and improving performance.
