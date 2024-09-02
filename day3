@@ -1,0 +1,145 @@
+1. Perfect Number Checker: 
+Write a function that checks if a given number is a perfect number. A perfect number is equal to the sum of its proper divisors (excluding itself).
+Example:
+Input: 28
+Output: True (28 = 1 + 2 + 4 + 7 + 14)
+
+#include<iostream>
+using namespace std;
+void Perfectnum(int n);
+int main(){
+	int n,sum=0;
+	cout<<"Enter a number:";
+	cin>>n;
+	Perfectnum(n);
+	return 0;
+}
+void Perfectnum(int n){
+	int sum=0;
+	for(int i=1;i<=n/2;i++){
+		if(n%i==0){
+			sum=sum+i;
+		}
+	}
+	if(sum==n){
+		cout<<"its a perfect number:";
+	}
+	else {
+		cout<<"It's not a perfect number:";
+	}
+}
+
+
+2. Palindrome Number:
+ Write a function that checks if a given integer is a palindrome. A palindrome number remains the same when its digits are reversed.
+Example:
+Input: 121
+Output: True
+
+#include<iostream>
+using namespace std;
+void CheckPallindrome(int n);
+int main(){
+	int n,sum=0;
+	cout<<"enter number:";
+	cin>>n;
+	CheckPallindrome(n);
+	return 0;
+}
+void CheckPallindrome(int n){
+	int sum=0;
+	while(n!=0){
+		sum=sum+n%10;
+		sum=sum*10;
+		n=n/10;
+	}
+	sum=sum/10;
+	if(sum==n){
+		cout<<"Its a pallindrome:";
+	}
+	else{
+		cout<<"Not a pallindrome number:";
+	}
+}
+
+
+3. Count Vowels: 
+Write a function that counts the number of vowels (a, e, i, o, u) in a given string.
+Example:
+Input: “Hello, World!”
+Output: 3
+
+#include<iostream>
+using namespace std;
+int CountVowels(string str);
+int main(){
+	string str;
+	cout<<"Enter a string:";
+	cin>>str;
+	CountVowels(str);
+	return 0;	
+}
+int CountVowels(string str)
+{
+    int count = 0;
+    for(int i = 0; i < str.length(); i++)
+    {
+        char c = toupper(str[i]);
+        if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
+            count++;
+    }
+    cout<<"No of vowels are:"<<count;
+    return count;
+}
+
+4. Reverse List:
+Write a function that reverses a given list of integers.
+Example:
+Input: [1, 2, 3, 4, 5]
+Output: [5, 4, 3, 2, 1]
+
+#include<iostream>
+using namespace std;
+void reverse(int n);
+int main(){
+	int n,sum=0;
+	cout<<"enter number:";
+	cin>>n;
+	reverse(n);
+	return 0;
+}
+void reverse(int n){
+	int sum=0;
+	while(n!=0){
+		sum=sum+n%10;
+		sum=sum*10;
+		n=n/10;
+	}
+	sum=sum/10;
+	cout<<"After reversing:"<<sum;
+}
+
+
+5. Factorial of a Number:
+Write a function that calculates the factorial of a non-negative integer.
+Example:
+Input: 5
+Output: 120 (5! = 5 × 4 × 3 × 2 ×1)
+
+#include<iostream>
+using namespace std;
+void factorial(int n);
+int main(){
+	int n,fact=1;
+	cout<<"Enter a number:";
+	cin>>n;
+	factorial(n);
+	return 0;
+}
+void factorial(int n){
+	int fact=1;
+	for(int i=1;i<=n;i++){
+		fact=fact*i;
+			}
+			cout<<"factorial of the number is:"<<fact;
+		}
